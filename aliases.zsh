@@ -8,10 +8,15 @@ alias remsubprefix="find . -mindepth 1 -type f -exec rename -v 's/\d+ - //' {} \
 
 alias resample="lame --resample 44.1 -b 256"
 
+alias vitetree="tree -C -I 'dist|node_modules|.git|#*'"
+
+
 sa () {
     source $1/bin/activate
     # export PYTHONPATH=$(pwd):\$PYTHONPATH
 }
+
+alias epp="export PYTHONPATH=$(pwd)"
 
 pa () {
     source $1/bin/activate
@@ -28,6 +33,8 @@ alias pir="pip install -r requirements.txt"
 
 # sudo apt install
 alias sai="sudo apt install"
+
+alias blender="/Applications/Blender.app/Contents/MacOS/Blender"
 
 # Not on system
 # alias round_img="python3 ~/.emacs.d/jpg2rounded_png.py"
@@ -78,3 +85,20 @@ function git_sparse_clone() (
 
   git checkout
 )
+
+
+alias sclang="/Applications/SuperCollider.app/Contents/MacOS/sclang"
+alias scynth="/Applications/SuperCollider.app/Contents/Resources/scynth"
+
+
+function webp2jpg() {
+  for file in "$@"; do
+    if [[ -f "$file" && "$file" == *.webp ]]; then
+      output="${file%.webp}.jpg"
+      sips -s format jpeg "$file" --out "$output"
+      echo "Converted $file → $output"
+    else
+      echo "Skipped $file (not a .webp file or doesn't exist)"
+    fi
+  done
+}
