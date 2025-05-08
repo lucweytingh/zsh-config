@@ -22,19 +22,11 @@ pa () {
     source $1/bin/activate
 }
 
-alias ca="conda activate"
-alias ci="conda install"
-alias cof="conda env create -f"
-alias coc="conda create -n"
-alias cod="conda deactivate"
-alias coe="conda info --envs"
 alias pis="pip install -e ."
 alias pir="pip install -r requirements.txt"
 
 # sudo apt install
 alias sai="sudo apt install"
-
-alias blender="/Applications/Blender.app/Contents/MacOS/Blender"
 
 # Not on system
 # alias round_img="python3 ~/.emacs.d/jpg2rounded_png.py"
@@ -85,10 +77,6 @@ function git_sparse_clone() (
 
   git checkout
 )
-
-
-alias sclang="/Applications/SuperCollider.app/Contents/MacOS/sclang"
-alias scynth="/Applications/SuperCollider.app/Contents/Resources/scynth"
 
 
 function webp2jpg() {
