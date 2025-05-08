@@ -17,6 +17,7 @@ sa () {
 }
 
 alias epp="export PYTHONPATH=$(pwd)"
+alias pythonpath="export PYTHONPATH=$(pwd)"
 
 pa () {
     source $1/bin/activate
