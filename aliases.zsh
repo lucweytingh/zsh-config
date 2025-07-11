@@ -13,10 +13,11 @@ alias vitetree="tree -C -I 'dist|node_modules|.git|#*'"
 
 sa () {
     source $1/bin/activate
-    # export PYTHONPATH=$(pwd):\$PYTHONPATH
+    export PYTHONPATH=$(pwd)
 }
 
-alias epp="export PYTHONPATH=$(pwd)"
+# export pythonpath to current directory and print export pythonpath
+alias pythonpath="export PYTHONPATH=$(pwd) && echo \"PYTHONPATH=\$PYTHONPATH\""
 
 pa () {
     source $1/bin/activate
